@@ -1,38 +1,35 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles'
 import {
-  makeStyles,
   AppBar,
   Toolbar,
   Typography,
   Button,
   ButtonGroup,
-} from "@material-ui/core";
+} from "@material-ui/core"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
+    background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
+    color: '#e9d8a6',
+    padding: 2,
     flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
   },
   
-})
-);
+});
 
 export const Navbar = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div >
       <AppBar 
-        position="static"
-        // style={{
-        //     backgroundColor: 'e9d8a6',
-        //     }}
-        >
+        className={classes.root}
+        position= "static"
+      >
         <Toolbar>
           <Typography variant="h4" className={classes.title}>
             Sarah Jensen

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   makeStyles,
@@ -6,23 +6,35 @@ import {
   BottomNavigationAction,
   Box,
   Typography,
- 
 } from "@material-ui/core";
-import {
-    ArrowLeft,
-    ArrowRight,
-    GitHub,
-    LinkedIn
- } from '@material-ui/icons';
+import { positions } from "@material-ui/system";
+import { ArrowLeft, ArrowRight, GitHub, LinkedIn } from "@material-ui/icons";
+
+const useStyles = makeStyles({
+  root: {
+    background: "linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)",
+    color: "#e9d8a6",
+    padding: 2,
+    flexGrow: 1,
+    
+  },
+});
 
 export const Footer = () => {
-    const [value, setValue] = React.useState(0);
+  const classes = useStyles();
+  const [value, setValue] = useState(0);
 
   return (
-    
+    <Box 
+        display="flex" 
+        maxWidth="sm" 
+        justifyContent="center"
+    >
       <BottomNavigation
+        className={classes.root}
+        borderRadius={5}
         showLabels
-        value={value}
+        position="absolute"
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
@@ -43,8 +55,7 @@ export const Footer = () => {
             label="Next" 
             icon={<ArrowRight />} 
         />
-        
       </BottomNavigation>
-  
+    </Box>
   );
-}
+};

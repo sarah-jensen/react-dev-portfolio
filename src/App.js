@@ -3,23 +3,24 @@ import React from 'react';
 import {
   Navbar,
   Footer,
-  Project
+  Project,
+
 } from './components';
 
-import { 
+import {
   Container,
   Typography, 
-  createTheme
+ 
 } from '@material-ui/core';
-
 
 
 const App =() => {
   return (
     <div className="App">
-      <Navbar/>
-      <Footer/>
-
+      
+        <Navbar/>
+        <Footer/>
+       
     </div>
   );
 }
