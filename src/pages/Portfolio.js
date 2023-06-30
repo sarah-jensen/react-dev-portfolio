@@ -10,12 +10,13 @@ import {
   Grid,
   Typography
 } from "@material-ui/core";
-import { maxHeight } from "@material-ui/system";
+import { fontWeight, maxHeight } from "@material-ui/system";
 
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    height: "100%"
+    height: "100%",
+    
   },
   media: {
     height: 140,
@@ -34,8 +35,10 @@ export const Portfolio = () => {
         margin="3% auto"
     >
         <Typography
-            variant="h3"
-            
+            variant="h4"
+            style={{
+                color:"#283845",
+              fontWeight: "bold"}}
         >
         Portfolio
         </Typography>
