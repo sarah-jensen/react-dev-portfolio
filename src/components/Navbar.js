@@ -11,7 +11,7 @@ import {
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
-    color: '#e9d8a6',
+    color: '#e5e6e4',
     padding: 2,
     flexGrow: 1,
   },
