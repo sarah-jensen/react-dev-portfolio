@@ -1,4 +1,3 @@
 export * from './Navbar';
 export * from './Footer';
-export * from './Project';
-export * from './Palette';
+export * from '../pages/Portfolio';

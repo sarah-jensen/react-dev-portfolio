@@ -14,7 +14,6 @@ const useStyles = makeStyles({
   root: {
     background: "linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)",
     color: "#e9d8a6",
-    padding: 2,
     flexGrow: 1,
     
   },
@@ -29,12 +28,13 @@ export const Footer = () => {
         display="flex" 
         maxWidth="sm" 
         justifyContent="center"
+        alignSelf="flex-end"
     >
       <BottomNavigation
         className={classes.root}
-        borderRadius={5}
         showLabels
-        position="absolute"
+        position="fixed"
+        bottom={2}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
