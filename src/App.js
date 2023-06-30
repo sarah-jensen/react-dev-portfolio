@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Navbar, Footer, Portfolio } from "./components";
-
+import { Navbar, Footer, Portfolio, AboutMe } from "./components";
+import Background from "./assets/images/background.jpg"
 import { Container } from "@material-ui/core";
 
 const App = () => {
@@ -14,9 +14,15 @@ const App = () => {
       px={0}
       py={0}
       style={{
-        background:"linear-gradient( #f2f3ae, #e9d8a6)"
+        backgroundImage: `url(${Background})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        width: '100vw',
+        minHeight: '100vh',
       }}>
         <Navbar />
+        <AboutMe/>
         <Portfolio />
         <Footer />
       </Container>

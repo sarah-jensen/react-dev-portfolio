@@ -41,7 +41,9 @@ export const Navbar = () => {
             // backgroundColor= 
             // TODO: add highlight to selected Navigation button
           >
-            <Button color="inherit">About Me</Button>
+            <Button 
+              color="inherit"
+              >About Me</Button>
             <Button color="inherit">Portfolio</Button>
             <Button color="inherit">Contact</Button>
             <Button color="inherit">Resume</Button>
