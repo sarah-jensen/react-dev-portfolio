@@ -19,6 +19,7 @@ const useStyles = makeStyles({
    backgroundColor: '#e5e6e4'
   },
   media: {
+
     height: 250,
   },
   buttonLeft: {
@@ -42,10 +43,10 @@ export const Project = (props) => {
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
-            component="img"
-            alt={props.imgAlt}
-            image={props.thumbnail}
             className={classes.media}
+            image={props.thumbnail}
+            alt={props.imgAlt}
+          
           />
           <CardContent>
             <Typography  variant="h5" component="h2" style={{
