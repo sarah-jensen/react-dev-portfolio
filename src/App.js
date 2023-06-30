@@ -1,28 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import {
-  Navbar,
-  Footer,
-  Project,
+import { Navbar, Footer, Portfolio } from "./components";
 
-} from './components';
+import { Container } from "@material-ui/core";
 
-import {
-  Container,
-  Typography, 
- 
-} from '@material-ui/core';
-
-
-const App =() => {
+const App = () => {
   return (
     <div className="App">
-      
-        <Navbar/>
-        <Footer/>
-       
+      <Container
+      // maxWidth="xs"
+      mx={0}
+      my={0}
+      px={0}
+      py={0}
+      style={{
+        background:"linear-gradient( #f2f3ae, #e9d8a6)"
+      }}>
+        <Navbar />
+        <Portfolio />
+        <Footer />
+      </Container>
     </div>
   );
-}
+};
 
 export default App;
