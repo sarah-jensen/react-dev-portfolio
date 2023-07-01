@@ -1,22 +1,29 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import clsx from 'clsx';
 import {
   Card,
   CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
+  Collapse,
+  IconButton,
   Button,
   Typography,
 } from "@material-ui/core";
+import {
+  ExpandMore,
+} from "@material-ui/icons";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
    padding: "16px",
    margin: "8px",
    border: 0,
-   backgroundColor: '#e5e6e4'
+   backgroundColor: "#9daeb3",
+    color: "#0f4c5c",
   },
   media: {
 
@@ -33,11 +40,26 @@ const useStyles = makeStyles({
     color: '#e5e6e4',
     variant: "contained" ,
     size:"small"
-  }
-});
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+})
+);
 
 export const Project = (props) => {
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   return (
 
       <Card className={classes.root}>
@@ -52,17 +74,18 @@ export const Project = (props) => {
             <Typography  variant="h5" component="h2" style={{
                 color:"#283845", marginTop:"-8px"}}>
               {props.title}
-            </Typography>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                marginBottom:"-16px"}}
-              href={props.appUrl}
-            >
-              {props.description}
-            </Typography>
+
+            <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+          >
+          <ExpandMore />
+        </IconButton>
+          </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
@@ -71,11 +94,26 @@ export const Project = (props) => {
             marginLeft: "8px", marginRight: "8px"}}>
               View Application
             </Button>
+
             <Button className={classes.buttonRight} href={props.gitHubUrl} style={{
             marginLeft: "8px"}}>
               View on GitHub
             </Button>
+
         </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>
+            {props.descriptionP1}
+          </Typography>
+          <Typography paragraph>
+          {props.descriptionP2} 
+          </Typography>
+          <Typography>
+          {props.descriptionP3} 
+          </Typography>
+        </CardContent>
+      </Collapse>
       </Card>
   );
 };

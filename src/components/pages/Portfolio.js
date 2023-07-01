@@ -56,6 +56,9 @@ export const Portfolio = () => {
                 imgAlt="Welcome and log-in page for recipe app."
                 appUrl="https://kitchen-alchemy.herokuapp.com/"
                 gitHubUrl="https://github.com/Zed-CSP/codeConnoisseurs"
+                descriptionP1="Application allowing users to create and save recipes to a database for easy and simple access."
+                descriptionP2="Full-stack agile team development project for UC Berkeley Extension coding bootcamp utilizing SQL/Sequelize for database functionality."
+                descriptionP3="Notable contribution: Nodemailer package setup to send welcome email for new accounts."
             />   
         </Grid>
 
@@ -66,6 +69,9 @@ export const Portfolio = () => {
                 imgAlt="Welcome page with city-search field."
                 appUrl="https://zed-csp.github.io/dangerForce-Proj-1/"
                 gitHubUrl="https://github.com/Zed-CSP/dangerForce-Proj-1"
+                descriptionP1="Web app that allows users to look up air quality data for cities around the world."
+                descriptionP2="Front-end agile development project for UC Berkeley Extension coding bootcamp utilizing multiple API requests and a CSS Framework other than Bootstrap."
+                descriptionP3="Notable contribution: Led implementation of Tailwind CSS Framework."
             />
         </Grid>
 
@@ -76,6 +82,9 @@ export const Portfolio = () => {
                 imgAlt="Landing page with start button."
                 appUrl="https://sarah-jensen.github.io/code-quiz/"
                 gitHubUrl="https://github.com/sarah-jensen/code-quiz"
+                descriptionP1="Flash-card style quiz for coding fundamentals."
+                descriptionP2="Individual front-end development project for UC Berkeley Extension coding bootcamp utilizing responsive elements and local storage."
+                
             />
         </Grid>
           
