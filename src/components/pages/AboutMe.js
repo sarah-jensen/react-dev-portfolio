@@ -77,8 +77,11 @@ export const AboutMe = () => {
       <Grid container display="flex" box="border-box" spacing={2}>
         <Grid item xs>
           <Card className={classes.root}>
-            <Typography variant="body1">
+            <Typography paragraph variant="body1">
                I'm excited to bring my theatre and special education background into web development by blending engagement with accessiblity to enhance user experience.
+            </Typography>
+            <Typography variant="body1">
+               My professional expertise in the realm of communication is an asset that supports intra and inter team collaboration and problem solving.
             </Typography>
           </Card>
         </Grid>
