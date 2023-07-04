@@ -3,7 +3,8 @@ import Navbar from './Navbar';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
-// import Contact from './pages/Contact';
+import Contact from './pages/Contact';
+
 import { makeStyles } from '@material-ui/core/styles'
 
 export const PageContainer = () => {
