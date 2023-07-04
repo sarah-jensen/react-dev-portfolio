@@ -57,8 +57,8 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
             <Button 
               className={currentPage === 'Resume' ? `${classes.selected}` : `${classes.inactive}`}
               onClick={() => handlePageChange('Resume')}  
-            >Contact</Button>
-            <Button color="inherit">Resume</Button>
+            >Resume</Button>
+            <Button color="inherit">Contact</Button>
           </ButtonGroup>
         </Toolbar>
       </AppBar>
