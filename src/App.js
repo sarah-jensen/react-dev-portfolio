@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Navbar, Footer, Portfolio, AboutMe } from "./components";
+import { Navbar, Footer, Portfolio, AboutMe, Resume } from "./components";
 import Background from "./assets/images/background.jpg"
 import { Container } from "@material-ui/core";
 
@@ -24,6 +24,7 @@ const App = () => {
         <Navbar />
         <AboutMe/>
         <Portfolio />
+        <Resume/>
         <Footer />
       </Container>
     </div>
