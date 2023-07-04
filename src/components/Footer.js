@@ -6,7 +6,6 @@ import {
   makeStyles,
   BottomNavigation,
   BottomNavigationAction,
-  Box,
   SvgIcon,
 } from "@material-ui/core";
 
@@ -14,6 +13,10 @@ import { GitHub, LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: '3rem',
     background: "linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)",
     color: "#e9d8a6",
     flexGrow: 1,
@@ -25,20 +28,11 @@ export const Footer = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <Box
-      display="flex"
-      maxWidth="sm"
-      justifyContent="center"
-      alignSelf="flex-end"
-    >
+    <div>
       <BottomNavigation
         className={classes.root}
         showLabels
-        position="fixed"
-        bottom={2}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
+        position="absolute"
       >
         <BottomNavigationAction
           label="GitHub"
@@ -59,7 +53,7 @@ export const Footer = () => {
                 width="20"
                 height="20"
                 fill="currentColor"
-                class="bi bi-stack-overflow"
+                className="bi bi-stack-overflow"
                 viewBox="0 0 16 16"
               >
                 <path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
@@ -70,6 +64,6 @@ export const Footer = () => {
           href="https://stackoverflow.com/users/22170531/sarah-jensen"
         />
       </BottomNavigation>
-    </Box>
+    </div>
   );
 };
