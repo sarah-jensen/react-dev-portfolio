@@ -24,6 +24,8 @@ export const Resume = () => {
                 >
             Download PDF
             </Button>
+
+            {/* TODO: add  list of developer proficiencies*/}
         </Container>
     )
 }

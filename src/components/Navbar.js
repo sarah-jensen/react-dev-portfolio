@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
     color: '#e5e6e4', 
     flexGrow: 1,
+    marginBottom: '5%'
   },
   title: {
     flexGrow: 1,
@@ -57,8 +58,10 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
             <Button 
               className={currentPage === 'Resume' ? `${classes.selected}` : `${classes.inactive}`}
               onClick={() => handlePageChange('Resume')}  
-            >Contact</Button>
-            <Button color="inherit">Resume</Button>
+            >Resume</Button>
+            <Button 
+            className={currentPage === 'Contact' ? `${classes.selected}` : `${classes.inactive}`}
+            onClick={() => handlePageChange('Contact')}>Contact</Button>
           </ButtonGroup>
         </Toolbar>
       </AppBar>
