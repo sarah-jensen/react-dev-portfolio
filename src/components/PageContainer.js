@@ -5,7 +5,6 @@ import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
-import { makeStyles } from '@material-ui/core/styles'
 
 export const PageContainer = () => {
   const [currentPage, setCurrentPage] = useState('AboutMe');
@@ -21,8 +20,9 @@ export const PageContainer = () => {
     if (currentPage === 'Resume') {
       return <Resume />;
     }
-    // return <Contact />;
-  };
+    return <Contact />;
+    };
+  
 
   const handlePageChange = (page) => setCurrentPage(page);
 
@@ -34,6 +34,7 @@ export const PageContainer = () => {
       {renderPage()}
     </div>
   );
-}
+};
+
 
 export default PageContainer;
