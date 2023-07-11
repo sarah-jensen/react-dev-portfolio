@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //import validation function
 import validateEmail from "../../utils/validateEmail";
 
