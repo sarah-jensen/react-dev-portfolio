@@ -1,38 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
 // import StackOverflow from "../../assets/images/stack-overflow.png";
 
 import {
-  makeStyles,
+  
   BottomNavigation,
   BottomNavigationAction,
+  Container,
   SvgIcon,
 } from "@material-ui/core";
 
 import { GitHub, LinkedIn } from "@material-ui/icons";
 
-const useStyles = makeStyles({
-  root: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    height: '3rem',
-    background: "linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)",
-    color: "#e9d8a6",
-    flexGrow: 1,
-  },
-});
+
 
 export const Footer = () => {
-  const classes = useStyles();
-  const [value, setValue] = useState(0);
+
+  // const [value, setValue] = useState(0);
 
   return (
-    <div>
+    <Container className="footer-container">
       <BottomNavigation
-        className={classes.root}
+        className='footer'
         showLabels
-        position="absolute"
+        position="fixed"
+        bottom={0}
+        maxWidth
+      
       >
         <BottomNavigationAction
           label="GitHub"
@@ -64,6 +58,8 @@ export const Footer = () => {
           href="https://stackoverflow.com/users/22170531/sarah-jensen"
         />
       </BottomNavigation>
-    </div>
+    </Container>
   );
 };
+
+export default Footer;
