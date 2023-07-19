@@ -1,29 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { Footer, PageContainer } from "./components";
-import Background from "./assets/images/background.jpg"
-import { Container } from "@material-ui/core";
+import { Footer, PageContainer } from './components';
+
+import { Container } from '@material-ui/core';
+
+import './utils/styles/styles.css'; //import CSS file
 
 const App = () => {
   return (
-    <div className="App">
+    <div>
       <Container
-      mx={0}
-      my={0}
-      px={0}
-      py={0}
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        width: '100vw',
-        minHeight: '100vh',
-        position: 'relative',
-      }}>
-
-        <PageContainer/>
-        <Footer/>
+        className='App'
+        maxWidth
+        justify='center'
+      >
+        <PageContainer />
       </Container>
     </div>
   );

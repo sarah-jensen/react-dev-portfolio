@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
+  Box,
+  Container,
   Toolbar,
   Typography,
   Button,
@@ -13,11 +15,11 @@ const useStyles = makeStyles({
     background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
     color: '#e5e6e4', 
     flexGrow: 1,
-    marginBottom: '5%'
+    marginBottom: '5%',
   },
   title: {
     flexGrow: 1,
-  }, 
+  },
   selected: {
     background: 'inherit',
     color: '#f9e652',
@@ -33,7 +35,7 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
 
 
   return (
-    <div >
+    <Container disableGutters sx={{ width: 1 }} justifyContent='space-evenly'>
       <AppBar 
         className={classes.root}
         position= "static"
@@ -42,10 +44,11 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
           <Typography variant="h4" className={classes.title}>
             Sarah Jensen
           </Typography>
+          
           <ButtonGroup
             variant="text"
             aria-label="text primary button group"
-            // TODO: add highlight to selected Navigation button
+            orientation='vertical'
           >
             <Button 
               className={currentPage === 'AboutMe' ? `${classes.selected}` : `${classes.inactive}`}
@@ -65,9 +68,7 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
           </ButtonGroup>
         </Toolbar>
       </AppBar>
-
-     
-    </div>
+      </Container>
   );
 };
 

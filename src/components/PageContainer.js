@@ -4,6 +4,9 @@ import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import Footer from './Footer';
+
+import { Container } from '@material-ui/core';
 
 
 export const PageContainer = () => {
@@ -27,12 +30,14 @@ export const PageContainer = () => {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <Container className="page-container" >
       {/* We are passing the currentPage from state and the function to update it */}
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
-    </div>
+      <div id='separator'></div>
+      <Footer/>
+    </Container>
   );
 };
 

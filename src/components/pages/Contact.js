@@ -10,7 +10,8 @@ import { Button, Container, FormControl, Grid, TextField, Typography } from "@ma
 const useStyles = makeStyles((form) => ({
   root: {
     flexGrow: 1,
-    background: "#fffcf2",
+    backgroundColor: "#9daeb3",
+    color: "#283845",
     opacity: "75%",
     padding: 20,
   },
@@ -103,7 +104,7 @@ const handleFormSubmit = (e) => {
           variant="h4"
           justifySelf="center"
           style={{
-            color: "#283845",
+            color: '#122c49',
             fontWeight: "bold",
           }}
         >
