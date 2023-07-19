@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imgCard: {
     borderRadius: "50%",
-    flexGrow: 1,
+    flexGrow: .5,
     padding: '.5rem',
     margin: "auto",
     background: "linear-gradient(to right bottom, #5f0f40 30%, #6f1d1b 90%)",

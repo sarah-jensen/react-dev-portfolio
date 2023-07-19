@@ -23,8 +23,6 @@ export const Footer = () => {
       <BottomNavigation
         className='footer'
         showLabels
-        position="fixed"
-        bottom={0}
         maxWidth
       
       >
