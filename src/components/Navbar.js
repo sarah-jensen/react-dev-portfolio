@@ -40,7 +40,7 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
         position= "static"
       >
         <Toolbar>
-          <Typography variant="h4" className={classes.title}>
+          <Typography variant="h3" className={classes.title}>
             Sarah Jensen
           </Typography>
           
@@ -52,18 +52,24 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
             <Button 
               className={currentPage === 'AboutMe' ? `${classes.selected}` : `${classes.inactive}`}
               onClick={() => handlePageChange('AboutMe')}  
+              size="small"
               >About Me</Button>
             <Button 
               className={currentPage === 'Portfolio' ? `${classes.selected}` : `${classes.inactive}`}
               onClick={() => handlePageChange('Portfolio')}  
+              size="small"
             >Portfolio</Button>
             <Button 
               className={currentPage === 'Resume' ? `${classes.selected}` : `${classes.inactive}`}
               onClick={() => handlePageChange('Resume')}  
+              size="small"
             >Resume</Button>
             <Button 
             className={currentPage === 'Contact' ? `${classes.selected}` : `${classes.inactive}`}
-            onClick={() => handlePageChange('Contact')}>Contact</Button>
+            onClick={() => handlePageChange('Contact')}
+            size="small"
+            >Contact</Button>
+            
           </ButtonGroup>
         </Toolbar>
       </AppBar>
