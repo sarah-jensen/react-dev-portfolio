@@ -26,14 +26,20 @@ const App = () => {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div className='page-container'>
+    <div style={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+     
+    }}>
       <Container
         className='App'
         maxWidth
-        justify='center'
       >
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
+      
       {renderPage()}
         <Footer/>
       </Container>

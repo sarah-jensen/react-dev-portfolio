@@ -19,9 +19,9 @@ export const Footer = () => {
   // const [value, setValue] = useState(0);
 
   return (
-    <Container className="footer-container">
+    <footer>
       <BottomNavigation
-        className='footer'
+        className="footer-container"
         showLabels
         maxWidth
       
@@ -56,7 +56,7 @@ export const Footer = () => {
           href="https://stackoverflow.com/users/22170531/sarah-jensen"
         />
       </BottomNavigation>
-    </Container>
+    </footer>
   );
 };
 

@@ -1,44 +1,30 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
   CardActionArea,
   CardMedia,
   Container,
-  Grid,
   Typography,
-} from "@material-ui/core";
-import Avatar from "../../assets/images/avatar.png";
+} from '@material-ui/core';
+import Avatar from '../../assets/images/avatar.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    height: "100%",
-  },
-  text: {
-    padding: "16px",
-    marginTop: "44px",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    backgroundColor: "#9daeb3",
-    color: "#0f4c5c",
-  },
-  picElement: {
-    // flexGrow: .5,
-  },
-  textElement: {
-    // flexGrow: 1,
+    height: '100%',
   },
   media: {
-    borderRadius: "50%",
+    borderRadius: '50%',
   },
   imgCard: {
-    borderRadius: "50%",
-    flexGrow: .5,
+    borderRadius: '50%',
     padding: '.5rem',
-    margin: "auto",
-    background: "linear-gradient(to right bottom, #5f0f40 30%, #6f1d1b 90%)",
-    color: "#0f4c5c",
+    width: '10rem',
+    height: '10rem',
+    float: 'left',
+    margin: '0 2rem 1rem 0',
+    background: 'linear-gradient(to right bottom, #5f0f40 30%, #6f1d1b 90%)',
+    color: '#0f4c5c',
   },
 }));
 
@@ -46,49 +32,48 @@ export const AboutMe = () => {
   const classes = useStyles();
   return (
     <Container className={classes.root}>
-      <Grid 
-        container 
-        direction='row' 
-        spacing={2}
-        justifyContent="space-evenly"
-        alignItems="center"
-        >
-        <Grid item xs className={classes.picElement}>
-          <Card className={classes.imgCard}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                className={classes.media}
-                image={Avatar}
-                alt="A woman with red hair and glasses wears a black hat and smiles at the camera."
-              />
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid 
-          item 
-          xs className={classes.textElement}
-         >
-          <Card className={classes.text}>
-            <Typography paragraph variant="body1" width="20px">
-              Full-stack developer, Speech-Language Pathologist, single, mom and
-              companion to one dignified doggo. Fan of books, Balboa, and
-              geekery. Magpie of hobbies and pasttimes. Direct and transparent
-              communication is my life's work. That and pursuing the perfect bowl of popcorn.
-            </Typography>
-            <Typography paragraph variant="body1">
-               I'm excited to bring my theatre and special education background into web development by blending engagement with accessiblity to enhance user experience.
-            </Typography>
-            <Typography paragraph variant="body1">
-               My professional expertise in the realm of communication is an asset that supports intra and inter team collaboration and problem solving.
-            </Typography>
-            <Typography variant="body1" width="20px">
-              Based in Los Angeles, CA.
-            </Typography>
-          </Card>
-        </Grid>
-      
-      </Grid>
+      <Card className={classes.imgCard}>
+        <CardActionArea>
+          <CardMedia
+            component='img'
+            className={classes.media}
+            image={Avatar}
+            alt='A woman with red hair and glasses wears a black hat and smiles at the camera.'
+          />
+        </CardActionArea>
+      </Card>
+
+      <Typography
+        paragraph
+        variant='h6'
+      >
+        Hello there!
+      </Typography>
+
+      <Typography
+        paragraph
+        variant='h6'
+      >
+        I'm Sarah, a relatively newly minted full-stack developer. I've completed a full-stack web development bootcamp through the University of Berkeley Extension program, and am particularly excited about working React. I find it to be both dynamic and intuitive, and am looking for opportunities to work with it more extensively.
+      </Typography>
+      <Typography
+        paragraph
+        variant='h6'
+      >
+        I'm also a certificated and licensed Speech-Language Pathologist with a background in theater production and performance, and I've had the opportunity to blend these skill sets working in Special Education for the past ten years. While they may seem unrelated to web development, I see an opportunity to use them to enhance the experience of diverse users by blending engagement with accessiblity.
+      </Typography>
+      <Typography
+        paragraph
+        variant='h6'
+      >
+        Priorizing collaboration and clear communication has allowed me to work effectly with teams that include individuals who have a wide variety of experience and expertise, as well as differences in priority and personality. I've found that collaborating well with co-workers and other stakeholders is the best way to increase efficiency, productivity, and solve issues before they become problems.
+      </Typography>
+      <Typography
+        variant='h6'
+        width='20px'
+      >
+        I'm currently based in Los Angeles, CA. When I'm away from my desk you can usually find me hanging out with my dog, swing dancing, or crafting a new cosplay.
+      </Typography>
     </Container>
   );
 };
