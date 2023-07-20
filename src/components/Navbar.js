@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
     color: '#e5e6e4', 
-    marginBottom: '5%',
+    marginBottom: '3%',
   },
   title: {
     flexGrow: 1,

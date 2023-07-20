@@ -15,7 +15,7 @@ const useStyle = makeStyles({
   root: {
     position: 'static',  
     margin: 'auto',
-    marginTop: '5%',
+    // marginTop: '3%',
     background: 'linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)',
     color: '#e9d8a6',
     height: '60px'
