@@ -6,15 +6,13 @@ This site is intended to showcase various skill proficiencies and applications I
 
 ## Usage
 
-
-
 - When you first visit the site, you are taken to the "About Me" page with a short description about my background.
 - You can review a selection of my work, by clicking "Portfolio" in the header. Click the "View Application" button to check out the deployed application, or click "View on GitHub" to see the code on GitHub.
 - Click the "Contact" link in the header to complete the contact form. Please note that all the fields are required.
 - You may download my resume and view a list of my proficiences by clicking "Resume" in the header.
 - There are links to my profiles on GitHub, LinkedIn, and Stack Overflow in the footer of any page.
 
-![Preview showing the About Me page.](./src/assets/images/portfolio_screenshot.jpg)
+![Preview showing the "About Me" page](./src/assets/images/preview.png)
 
 ## Credits
 
