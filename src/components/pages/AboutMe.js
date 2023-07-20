@@ -12,7 +12,6 @@ import Avatar from '../../assets/images/avatar.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
-    marginBottom: '5%',
     marginTop: '2%'
   
   },

@@ -32,15 +32,17 @@ const App = () => {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div>
+    <div id="viewport">
       <Container
         maxHeight
         maxWidth
         style={{
-          height: '100%',
+          position: 'relative',
+          minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
+          padding: 0
         }}
       >
         <Navbar
@@ -48,8 +50,9 @@ const App = () => {
           handlePageChange={handlePageChange}
         />
         {/* Here we are calling the renderPage method which will return a component  */}
-
+        <div id="content-wrap">
         {renderPage()}
+        </div>
         <Footer className='footer-container' />
       </Container>
     </div>

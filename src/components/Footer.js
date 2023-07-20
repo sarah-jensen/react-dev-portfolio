@@ -13,9 +13,10 @@ import { GitHub, LinkedIn } from "@material-ui/icons";
 
 const useStyle = makeStyles({
   root: {
-    position: 'static',  
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',  
     margin: 'auto',
-    // marginTop: '3%',
     background: 'linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)',
     color: '#e9d8a6',
     height: '60px'
@@ -28,7 +29,7 @@ footer: {
 export const Footer = () => {
   const classes = useStyle();
   return (
-    <footer>
+    <footer maxWidth>
       <BottomNavigation
         className={classes.root}
         showLabels

@@ -5,4 +5,12 @@ html {
     background-color: #b5c2b7;
 }
 
+#viewport {
+    margin: 0;
+    padding: 0;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem; 
+}
 
