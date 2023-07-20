@@ -1,30 +1,37 @@
 import React from "react";
 
-// import StackOverflow from "../../assets/images/stack-overflow.png";
 
 import {
   
   BottomNavigation,
   BottomNavigationAction,
-  Container,
+  makeStyles,
   SvgIcon,
 } from "@material-ui/core";
 
 import { GitHub, LinkedIn } from "@material-ui/icons";
 
-
+const useStyle = makeStyles({
+  root: {
+    position: 'static',  
+    margin: 'auto',
+    marginTop: '5%',
+    background: 'linear-gradient(45deg, #db7c26 30%, #f6aa1c 90%)',
+    color: '#e9d8a6',
+    height: '60px'
+},
+footer: {
+  background: 'inherit'
+}
+});
 
 export const Footer = () => {
-
-  // const [value, setValue] = useState(0);
-
+  const classes = useStyle();
   return (
     <footer>
       <BottomNavigation
-        className="footer-container"
+        className={classes.root}
         showLabels
-        maxWidth
-      
       >
         <BottomNavigationAction
           label="GitHub"

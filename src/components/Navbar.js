@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
     color: '#e5e6e4', 
-    flexGrow: 1,
     marginBottom: '5%',
   },
   title: {
@@ -34,7 +33,7 @@ export const Navbar = ({ currentPage, handlePageChange }) => {
 
 
   return (
-    <Container disableGutters sx={{ width: 1 }} justifyContent='space-evenly'>
+    <Container maxWidth disableGutters sx={{ width: 1 }} justifyContent='space-evenly'>
       <AppBar 
         className={classes.root}
         position= "static"
