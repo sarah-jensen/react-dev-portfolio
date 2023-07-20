@@ -6,6 +6,8 @@ This site is intended to showcase various skill proficiencies and applications I
 
 ## Usage
 
+View the [deployed application](https://sarah-jensen.github.io/react-portfolio).
+
 - When you first visit the site, you are taken to the "About Me" page with a short description about my background.
 - You can review a selection of my work, by clicking "Portfolio" in the header. Click the "View Application" button to check out the deployed application, or click "View on GitHub" to see the code on GitHub.
 - Click the "Contact" link in the header to complete the contact form. Please note that all the fields are required.
