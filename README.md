@@ -14,7 +14,7 @@ View the [deployed appliation](https://sendusyourbones.github.io/rebecca-react-p
 - You may download my resume and view a list of my proficiences by clicking "Resume" in the header.
 - There are links to my profiles on GitHub, LinkedIn, and Stack Overflow in the footer of any page.
 
-![Screenshot of my portfolio website showing a header and About Me section](./src/assets/images/portfolio_screenshot.jpg)
+![Preview showing the "About Me" page](./src/assets/images/preview.png)
 
 ## Credits
 
@@ -26,3 +26,6 @@ Images for portfolio cards without a deployed front-end were sourced from Freepi
 ## License
 
 MIT License
+
+- freeCodeCamp - [How to keep your footer where it belongs](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
+    - This helped with displaying the footer at the bottom of the window if the content did not reach the bottom, and below the content if the content went past the bottom of the window
