@@ -3,6 +3,9 @@ import Project from "../Project.js";
 import KitchenAlchemy from "../../assets/images/kitchenalchemy.png";
 import SneezeTheDay from "../../assets/images/sneeze-the-day.png";
 import CodeQuiz from "../../assets/images/code-quiz.png";
+import Learnify from "../../assets/images/learnify-temp.jpg";
+import TechTalk from "../../assets/images/tech-talk.png";
+import CrewComms from "../../assets/images/crew-comms.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
@@ -26,7 +29,7 @@ export const Portfolio = () => {
   const classes = useStyles();
 
   return (
-    <Container>
+    <Container >
       <Box
         display="flex"
         justifyContent="center"
@@ -49,6 +52,19 @@ export const Portfolio = () => {
         justifyContent="space-evenly"
         alignItems="center"
       >
+        <Grid item xs>
+            <Project
+                title="Learnify"
+                thumbnail={Learnify}
+                imgAlt="Under construction"
+                appUrl=""
+                gitHubUrl="https://github.com/UserOlena/Learnify"
+                descriptionP1="Learning platform that allows users to both learn from others' and create their own tutorials."
+                descriptionP2="Full-stack agile team development project for UC Berkeley Extension coding bootcamp utilizing React and MongoDB/Mongoose."
+                descriptionP3=""
+            />   
+        </Grid>
+
         <Grid item xs>
             <Project
                 title="Kitchen Alchemy"
@@ -74,7 +90,42 @@ export const Portfolio = () => {
                 descriptionP3="Notable contribution: Led implementation of Tailwind CSS Framework."
             />
         </Grid>
+        </Grid>
 
+        <Grid
+        container
+        className={classes.root} 
+        direction="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+      >
+        <Grid item xs>
+            <Project
+                title="Tech Talk Blog"
+                thumbnail={TechTalk}
+                imgAlt="List of blog posts"
+                appUrl=""
+                gitHubUrl="https://github.com/sarah-jensen/tech-blog"
+                descriptionP1="Users can create an account, post and view blogs, and leave comments."
+                descriptionP2="Full-stack assignment for UC Berkeley Extension coding bootcamp utilizing handlebars-express for rendering and SQL/Sequelize for the database"
+                
+            />
+        </Grid>
+
+        <Grid item xs>
+            <Project
+                title="Crew Comms"
+                thumbnail={CrewComms}
+                imgAlt="Social network media"
+                appUrl="https://drive.google.com/file/d/1kDVl2v1dKBf49lRasKYLbtKybwPkmu7J/view"
+                gitHubUrl="https://github.com/sarah-jensen/crew-comms"
+                descriptionP1="Back-end for social network API."
+                descriptionP2="Back-end assignment for UC Berkeley Extension coding bootcamp utilizing MongoDB, full CRUD functionality, and testing with Postman."
+                descriptionP3="View Application button will take you to a demo video."
+                
+            />
+        </Grid>
+        
         <Grid item xs>
             <Project
                 title="Coding Quiz"
