@@ -6,8 +6,6 @@ This site is intended to showcase various skill proficiencies and applications I
 
 ## Usage
 
-View the [deployed appliation](https://sendusyourbones.github.io/rebecca-react-portfolio).
-
 - When you first visit the site, you are taken to the "About Me" page with a short description about my background.
 - You can review a selection of my work, by clicking "Portfolio" in the header. Click the "View Application" button to check out the deployed application, or click "View on GitHub" to see the code on GitHub.
 - Click the "Contact" link in the header to complete the contact form. Please note that all the fields are required.
@@ -26,6 +24,3 @@ Images for portfolio cards without a deployed front-end were sourced from Freepi
 ## License
 
 MIT License
-
-- freeCodeCamp - [How to keep your footer where it belongs](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
-    - This helped with displaying the footer at the bottom of the window if the content did not reach the bottom, and below the content if the content went past the bottom of the window
