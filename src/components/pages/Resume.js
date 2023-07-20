@@ -2,22 +2,9 @@ import React from 'react';
 import ResumePDF from '../../assets/files/Sarah-Jensen_resume.pdf';
 import BackEnd from '../../assets/images/back-end.png';
 import FrontEnd from '../../assets/images/front-end.png';
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Collapse,
-  Container,
-  IconButton,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
-import { ExpandMore } from '@material-ui/icons';
+import SkillCard from '../SkillCard.js';
+import { Grid, Button, Container, makeStyles } from '@material-ui/core';
 import { GetApp, Done } from '@material-ui/icons';
-import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -27,11 +14,7 @@ const useStyles = makeStyles((theme) => ({
     border: 2,
     backgroundColor: '#9daeb3',
     color: '#0f4c5c',
-    width: 'min-content'
-  },
-  cardBox: {
-    flexDirection: 'row',
-    justifyContent: 'space-evently',
+    flexBasis: 'calc(50% - 16px)',
   },
   button: {
     margin: theme.spacing(1),
@@ -67,10 +50,21 @@ const useStyles = makeStyles((theme) => ({
 
 export const Resume = () => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+
+  const frontEnd = [
+    'HTML',
+    'CSS (Tailwind, Material-UI, Bootstrap)',
+    'JavaScript',
+    'JQuery',
+    'React',
+  ];
+  const backEnd = [
+    'Node',
+    'Express',
+    'MySQL & Sequelize',
+    'MondoDB & Mongoose',
+    'CRUD',
+  ];
 
   return (
     <Container>
@@ -84,98 +78,35 @@ export const Resume = () => {
         Download PDF
       </Button>
 
-      <Box className={classes.cardBox}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={FrontEnd}
-            />
-            <CardContent>
-              <Typography
-                variant='h5'
-                component='h2'
-                style={{
-                  color: '#283845',
-                  marginTop: '-8px',
-                }}
-              >
-                Front-End Proficiencies
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: expanded,
-                  })}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label='show more'
-                >
-                  <ExpandMore />
-                </IconButton>
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <Collapse
-            in={expanded}
-            timeout='auto'
-            unmountOnExit
-          >
-            <CardContent>
-              <Typography paragraph>HTML</Typography>
-              <Typography paragraph>
-                CSS (Tailwind, Material-UI, Bootstrap)
-              </Typography>
-              <Typography paragraph>JavaScript</Typography>
-              <Typography paragraph>JQuery</Typography>
-              <Typography paragraph>React</Typography>
-              <Typography></Typography>
-            </CardContent>
-          </Collapse>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={BackEnd}
-            />
-            <CardContent>
-              <Typography
-                variant='h5'
-                component='h2'
-                style={{
-                  color: '#283845',
-                  marginTop: '-8px',
-                }}
-              >
-                Back-End Proficiencies
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: expanded,
-                  })}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label='show more'
-                >
-                  <ExpandMore />
-                </IconButton>
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <Collapse
-            in={expanded}
-            timeout='auto'
-            unmountOnExit
-          >
-            <CardContent>
-              <Typography paragraph>Node</Typography>
-              <Typography paragraph>Express</Typography>
-              <Typography paragraph>MySQL & Sequelize</Typography>
-              <Typography paragraph>MondoDB & Mongoose</Typography>
-              <Typography paragraph>CRUD</Typography>
-              <Typography></Typography>
-            </CardContent>
-          </Collapse>
-        </Card>
-      </Box>
+      <Grid
+        container
+        className={classes.root}
+        direction='row'
+        justifyContent='space-evenly'
+        alignItems='center'
+      >
+        <Grid
+          item
+          xs
+        >
+          <SkillCard
+            image={FrontEnd}
+            title='Front-End Proficiencies'
+            skills={frontEnd}
+          />
+        </Grid>
+
+        <Grid
+          item
+          xs
+        >
+          <SkillCard
+            image={BackEnd}
+            title='Back-End Proficiencies'
+            skills={backEnd}
+          />
+        </Grid>
+      </Grid>
     </Container>
   );
 };

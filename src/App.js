@@ -36,7 +36,6 @@ const App = () => {
       <Container
         maxHeight
         maxWidth
-        removeGutters
         style={{
           height: '100%',
           display: 'flex',
