@@ -1,6 +1,13 @@
 import { React, useState } from 'react';
 
-import { AboutMe, Contact, Footer, Navbar, Portfolio, Resume } from './components';
+import {
+  AboutMe,
+  Contact,
+  Footer,
+  Navbar,
+  Portfolio,
+  Resume,
+} from './components';
 
 import { Container } from '@material-ui/core';
 
@@ -21,27 +28,30 @@ const App = () => {
       return <Resume />;
     }
     return <Contact />;
-    };
-  
+  };
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div style={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-     
-    }}>
+    <div>
       <Container
-        className='App'
+        maxHeight
         maxWidth
+        removeGutters
+        style={{
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}
       >
-        <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Here we are calling the renderPage method which will return a component  */}
-      
-      {renderPage()}
-        <Footer/>
+        <Navbar
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
+        {/* Here we are calling the renderPage method which will return a component  */}
+
+        {renderPage()}
+        <Footer className='footer-container' />
       </Container>
     </div>
   );
