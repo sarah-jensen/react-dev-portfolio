@@ -57,7 +57,7 @@ export const Portfolio = () => {
                 title="Learnify"
                 thumbnail={Learnify}
                 imgAlt="Under construction"
-                appUrl=""
+                appUrl="https://learnify-7e031704dc94.herokuapp.com/"
                 gitHubUrl="https://github.com/UserOlena/Learnify"
                 descriptionP1="Learning platform that allows users to both learn from others' and create their own tutorials."
                 descriptionP2="Full-stack agile team development project for UC Berkeley Extension coding bootcamp utilizing React and MongoDB/Mongoose."
