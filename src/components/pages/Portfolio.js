@@ -2,10 +2,7 @@ import React from 'react';
 import Project from '../Project.js';
 import KitchenAlchemy from '../../assets/images/kitchenalchemy.png';
 import SneezeTheDay from '../../assets/images/sneeze-the-day.png';
-import CodeQuiz from '../../assets/images/code-quiz.png';
 import Learnify from '../../assets/images/learnify.png';
-import TechTalk from '../../assets/images/tech-talk.png';
-import CrewComms from '../../assets/images/crew-comms.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 
@@ -92,60 +89,6 @@ export const Portfolio = () => {
             descriptionP1='Web app that allows users to look up air quality data for cities around the world.'
             descriptionP2='Front-end agile development project for UC Berkeley Extension coding bootcamp utilizing multiple API requests and a CSS Framework other than Bootstrap.'
             descriptionP3='Notable contribution: Led implementation of Tailwind CSS Framework.'
-          />
-        </Grid>
-      </Grid>
-
-      <Grid
-        container
-        className={classes.root}
-        direction='row'
-        justifyContent='space-evenly'
-        alignItems='center'
-      >
-        <Grid
-          item
-          xs
-        >
-          <Project
-            title='Tech Talk Blog'
-            thumbnail={TechTalk}
-            imgAlt='List of blog posts'
-            appUrl=''
-            gitHubUrl='https://github.com/sarah-jensen/tech-blog'
-            descriptionP1='Users can create an account, post and view blogs, and leave comments.'
-            descriptionP2='Full-stack assignment for UC Berkeley Extension coding bootcamp utilizing handlebars-express for rendering and SQL/Sequelize for the database'
-          />
-        </Grid>
-
-        <Grid
-          item
-          xs
-        >
-          <Project
-            title='Crew Comms'
-            thumbnail={CrewComms}
-            imgAlt='Social network media'
-            appUrl='https://drive.google.com/file/d/1kDVl2v1dKBf49lRasKYLbtKybwPkmu7J/view'
-            gitHubUrl='https://github.com/sarah-jensen/crew-comms'
-            descriptionP1='Back-end for social network API.'
-            descriptionP2='Back-end assignment for UC Berkeley Extension coding bootcamp utilizing MongoDB, full CRUD functionality, and testing with Postman.'
-            descriptionP3='View Application button will take you to a demo video.'
-          />
-        </Grid>
-
-        <Grid
-          item
-          xs
-        >
-          <Project
-            title='Coding Quiz'
-            thumbnail={CodeQuiz}
-            imgAlt='Landing page with start button.'
-            appUrl='https://sarah-jensen.github.io/code-quiz/'
-            gitHubUrl='https://github.com/sarah-jensen/code-quiz'
-            descriptionP1='Flash-card style quiz for coding fundamentals.'
-            descriptionP2='Individual front-end development project for UC Berkeley Extension coding bootcamp utilizing responsive elements and local storage.'
           />
         </Grid>
       </Grid>
