@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 //import validation function
 import validateEmail from '../../utils/validateEmail';
 //import emailJS
@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Button,
   Container,
-  FormControl,
+  Divider,
   Grid,
   TextField,
   Typography,
@@ -83,23 +83,15 @@ export const Contact = () => {
     }
   };
 
-  const handleFocus = (state, setState) => {
-    if (state.isEmpty) {
-      setState((othervalues) => ({
-        ...otherValues,
-        isEmpty: false,
-      }));
-    }
-    if (!state.isValid) {
+    const resetFormFields = (setState) => {
       setState((otherValues) => ({
         ...otherValues,
-        isValid: true,
+        value: '',
       }));
-    }
-  };
+    };
 
     //function to handle form submission
-    const sendEmail = (e) => {
+    const handleFormSubmit = (e) => {
       e.preventDefault();
 
      const templateParams = {
@@ -117,7 +109,7 @@ export const Contact = () => {
         )
         .then(() => {
           resetFormFields(setName);
-          resetFormFields(setemail);
+          resetFormFields(setEmail);
           resetFormFields(setMessage);
           setSubmitted(true);
         })
@@ -127,14 +119,7 @@ export const Contact = () => {
           );
         });
       };
-
-      function resetFormFields(setState) {
-        setState((otherValues) => ({
-          ...otherValues,
-          value: '',
-        }));
-      }
-        
+          
   return (
     <Container maxWidth='sm'>
       <Grid
@@ -144,7 +129,7 @@ export const Contact = () => {
         alignItems='center'
       >
         <Typography
-          variant='h4'
+          variant='h3'
           justifySelf='center'
           style={{
             color: '#122c49',
@@ -153,21 +138,35 @@ export const Contact = () => {
         >
           Contact Me
         </Typography>
+
+        <Divider 
+          variant="middle" 
+        />
+
+        <Typography
+          variant='body1'
+          align='center'
+          style={{
+            color: '#122c49',
+            // fontWeight: 'bold',
+          }}
+        >
+          You can get in touch by sending a message here or emailing me at sarah.n.jensen@gmail.com
+        </Typography>
+
         <form className={classes.root}>
           <TextField
             required
             id='outlined-required'
             name='name'
-            value={name}
             label='Name'
             variant='outlined'
             autoFocus='true'
             type='text'
             fullWidth
             className={classes.input}
-            onChange={(e) => handleInputChange(e.target.value, setName)}
-            onBlur={(e) => handleBlur(e.target.value, setName)}
-            onFocus={() => handleFocus(name, setName)}
+            onChange={handleInputChange}
+            onBlur={handleBlur}
             error={name.isEmpty}
             helperText={name.isEmpty && 'Please enter your name'}
           />
@@ -176,7 +175,6 @@ export const Contact = () => {
             required
             id='outlined-required'
             name='email'
-            value={email}
             label='Email address'
             variant='outlined'
             type='email'
@@ -184,7 +182,6 @@ export const Contact = () => {
             className={classes.input}
             onChange={(e) => handleInputChange(e.target.value, setEmail)}
             onBlur={(e) => handleBlur(e.target.value, setEmail)}
-            onFocus={() => handleFocus(email, setEmail)}
             error={email.isEmpty || !email.isValid}
             helperText={
               (email.isEmpty && 'Please enter your email address') ||
@@ -196,7 +193,6 @@ export const Contact = () => {
             required
             id='outlined-multiline-static'
             name='message'
-            value={message}
             label='Message'
             multiline
             minRows={4}
@@ -206,7 +202,6 @@ export const Contact = () => {
             className={classes.inputMessage}
             onChange={(e) => handleInputChange(e.target.value, setMessage)}
             onBlur={(e) => handleBlur(e.target.value, setMessage)}
-            onFocus={() => handleFocus(message, setMessage)}
             error={message.isEmpty}
             helperText={message.isEmpty && 'Please enter a message'}
           />
@@ -216,7 +211,7 @@ export const Contact = () => {
             size='large'
             alignSelf='center'
             className={classes.button}
-            onClick={(e) => sendEmail}
+            onClick={(e) => handleFormSubmit}
           >
             Send Message
           </Button>
