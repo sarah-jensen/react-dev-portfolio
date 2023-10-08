@@ -211,7 +211,7 @@ export const Contact = () => {
             size='large'
             alignSelf='center'
             className={classes.button}
-            onClick={(e) => handleFormSubmit}
+            onClick={(e) => handleFormSubmit()}
           >
             Send Message
           </Button>
