@@ -1,1 +1,0 @@
-export * from './Sarah-Jensen_resume.pdf';
