@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.48e443aa.css",
+    "main.css": "/react-portfolio/static/css/main.281391fb.css",
     "main.js": "/react-portfolio/static/js/main.9c9405ab.js",
     "static/media/avatar.png": "/react-portfolio/static/media/avatar.2e22d3524c908275ea23.png",
     "static/media/Sarah-Jensen_resume.pdf": "/react-portfolio/static/media/Sarah-Jensen_resume.27062e5f4efdbdf69a9b.pdf",
@@ -10,11 +10,11 @@
     "static/media/back-end.png": "/react-portfolio/static/media/back-end.3fdcdcd302c9dc3ea1a1.png",
     "static/media/front-end.png": "/react-portfolio/static/media/front-end.d2d354c924fb9920c739.png",
     "index.html": "/react-portfolio/index.html",
-    "main.48e443aa.css.map": "/react-portfolio/static/css/main.48e443aa.css.map",
+    "main.281391fb.css.map": "/react-portfolio/static/css/main.281391fb.css.map",
     "main.9c9405ab.js.map": "/react-portfolio/static/js/main.9c9405ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.48e443aa.css",
+    "static/css/main.281391fb.css",
     "static/js/main.9c9405ab.js"
   ]
 }
