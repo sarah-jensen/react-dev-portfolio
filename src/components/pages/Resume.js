@@ -1,10 +1,12 @@
 import React from 'react';
-import ResumePDF from '../../assets/files/Sarah-Jensen_resume.pdf';
+
+import ResumeImage from '../../assets/images/resumeImage.png';
 import BackEnd from '../../assets/images/back-end.png';
 import FrontEnd from '../../assets/images/front-end.png';
+import ResumeCard from '../ResumeCard.js';
 import SkillCard from '../SkillCard.js';
-import { Grid, Button, Container, makeStyles } from '@material-ui/core';
-import { GetApp, Done } from '@material-ui/icons';
+import { Grid, Container, makeStyles } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -15,11 +17,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#9daeb3',
     color: '#0f4c5c',
     flexBasis: 'calc(50% - 16px)',
-  },
-  button: {
-    margin: theme.spacing(1),
-    background: 'linear-gradient(45deg, #0f4c5c 30%, #0a9396 90%)',
-    color: '#e5e6e4',
   },
   media: {
     height: 250,
@@ -68,15 +65,7 @@ export const Resume = () => {
 
   return (
     <Container>
-      <Button
-        variant='contained'
-        size='large'
-        className={classes.button}
-        startIcon={<GetApp />}
-        href={ResumePDF}
-      >
-        Download PDF
-      </Button>
+      
 
       <Grid
         container
@@ -89,9 +78,18 @@ export const Resume = () => {
           item
           xs
         >
+          <ResumeCard
+            image={ResumeImage}
+            title='Sarah Jensen Resume'
+          />
+        </Grid>
+        <Grid
+          item
+          xs
+        >
           <SkillCard
             image={FrontEnd}
-            title='Front-End Proficiencies'
+            title='Front-End Proficiencies  '
             skills={frontEnd}
           />
         </Grid>
@@ -102,7 +100,7 @@ export const Resume = () => {
         >
           <SkillCard
             image={BackEnd}
-            title='Back-End Proficiencies'
+            title='Back-End Proficiencies '
             skills={backEnd}
           />
         </Grid>

@@ -90,13 +90,24 @@ export const Project = (props) => {
         </CardActionArea>
         <CardActions>
           
-            <Button className={classes.buttonLeft} href={props.appUrl}  style={{
-            marginLeft: "8px", marginRight: "8px"}}>
+            <Button 
+              className={classes.buttonLeft} 
+              href={props.appUrl}  
+              target='_blank'
+              style={{
+                marginLeft: "8px", 
+                marginRight: "8px"}}
+            >
               View Application
             </Button>
 
-            <Button className={classes.buttonRight} href={props.gitHubUrl} style={{
-            marginLeft: "8px"}}>
+            <Button 
+              className={classes.buttonRight} 
+              href={props.gitHubUrl} 
+              target='_blank'
+              style={{
+                marginLeft: "8px"}}
+            >
               View on GitHub
             </Button>
 

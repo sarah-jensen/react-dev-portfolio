@@ -56,7 +56,7 @@ export const Portfolio = () => {
             gitHubUrl='https://github.com/UserOlena/Learnify'
             descriptionP1="Learning platform that allows users to both learn from others' and create their own tutorials."
             descriptionP2='Full-stack agile team development project for UC Berkeley Extension coding bootcamp utilizing React and MongoDB/Mongoose.'
-            descriptionP3=''
+            descriptionP3='Layout and functionality of View Tutorial page component. Primary reviewer of pull requests for approval.'
           />
         </Grid>
 
