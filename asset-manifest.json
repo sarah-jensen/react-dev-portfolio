@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.281391fb.css",
-    "main.js": "/react-portfolio/static/js/main.9c9405ab.js",
+    "main.js": "/react-portfolio/static/js/main.24ef0f91.js",
     "static/media/avatar.png": "/react-portfolio/static/media/avatar.2e22d3524c908275ea23.png",
     "static/media/Sarah-Jensen_resume.pdf": "/react-portfolio/static/media/Sarah-Jensen_resume.27062e5f4efdbdf69a9b.pdf",
     "static/media/kitchenalchemy.png": "/react-portfolio/static/media/kitchenalchemy.f6dbb67e799d98c043e0.png",
     "static/media/sneeze-the-day.png": "/react-portfolio/static/media/sneeze-the-day.9a02ec79eb25e55d0bee.png",
     "static/media/learnify.png": "/react-portfolio/static/media/learnify.a86c4f0ab2dd511882c1.png",
+    "static/media/resumeImage.png": "/react-portfolio/static/media/resumeImage.89d5b70afec921e1ff84.png",
     "static/media/back-end.png": "/react-portfolio/static/media/back-end.3fdcdcd302c9dc3ea1a1.png",
     "static/media/front-end.png": "/react-portfolio/static/media/front-end.d2d354c924fb9920c739.png",
     "index.html": "/react-portfolio/index.html",
     "main.281391fb.css.map": "/react-portfolio/static/css/main.281391fb.css.map",
-    "main.9c9405ab.js.map": "/react-portfolio/static/js/main.9c9405ab.js.map"
+    "main.24ef0f91.js.map": "/react-portfolio/static/js/main.24ef0f91.js.map"
   },
   "entrypoints": [
     "static/css/main.281391fb.css",
-    "static/js/main.9c9405ab.js"
+    "static/js/main.24ef0f91.js"
   ]
 }
